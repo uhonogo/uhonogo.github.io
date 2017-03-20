@@ -1,28 +1,23 @@
 <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
   Header set Cache-Control "max-age=2592000"
-   Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
 
 <ifModule mod_headers.c>
     # Все html и htm файлы будут храниться в кэше браузера один день
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "max-age=43200"
-         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
     # Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
     <FilesMatch "\.(js|css|txt)$">
         Header set Cache-Control "max-age=604800"
-         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
     # Все флэш файлы и изображения будут храниться в кэше браузера один месяц
     <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
         Header set Cache-Control "max-age=2592000"
-         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
     # Отключаем кеширование php и других служебных файлов
     <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
         Header unset Cache-Control
-         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
 
