@@ -1,20 +1,20 @@
-$(document).ready(function() {
-
-    //E-mail Ajax Send
-    $("#form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "../send.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Thank you!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
-
-});
+ function AjaxFormRequest(result_id,formMain,url) {
+ jQuery.ajax({
+ url: url,
+ type: "POST",
+ dataType: "html",
+ data: jQuery("#"+formMain).serialize(),
+ success: function(response) {
+ document.getElementById(result_id).innerHTML = response;
+ },
+ error: function(response) {
+ document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+ }
+ });
+ 
+ $(':input','#formMain')
+ .not(':button, :submit, :reset, :hidden')
+ .val('')
+ .removeAttr('checked')
+ .removeAttr('selected');
+ }
