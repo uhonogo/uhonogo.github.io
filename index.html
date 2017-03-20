@@ -41,10 +41,10 @@
 		<div class="parallax">
 		<div class="parallaxImage"></div>
 		<header id="hei" class="main-had">
-			<div class="text-justify scrollflow -slide-bottom" data-scrollflow-start="0" data-scrollflow-distance="100" data-scrollflow-amount="200">
-				<h1>Тут будет большой заголовок</h1>
+			<div class="text-justify">
+				<h1>Кроссбраузерная адаптивная верстка сайтов</h1>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, repellendus.
+					От 50 долларов
 				</p>
 			</div>
 			<div class="a around-circle">
@@ -81,9 +81,18 @@
     </div>
 		<section id="to" class="content color1">
 			<div class="section-content">
-				<h3><a href="#">обо мне</a></h3>
+				<h3>
+					<a href="#">
+						Юрий Щербаченко<br>
+						html-верстальщик, фрилансер
+					</a>
+				</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, voluptatem earum dolorem asperiores, fuga cupiditate delectus autem excepturi? Consequuntur veritatis quam ipsam error vero est cum molestiae rerum dolor quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aperiam, perspiciatis deserunt ab consequatur corporis quibusdam animi consectetur magnam voluptatibus nihil temporibus est dicta eum, unde eius sequi porro sed.
+					Выполняю Html-верстку (стандарты W3C, валидный код), создаю html-письма для e-mail рассылок. 
+					Разрабатываю с нуля сайты различной тематики: визитки, блоги, интернет-магазины, Landing Page и т.д., выполняю редизайн. 
+					Есть опыт кросбраузерной и адаптивной верстки, ваш сайт будет корректно работать на разных устройствах. 
+					Цена зависит от сложности макета и сроков. 
+
 				</p>
 				<div class="skill">
 					<h3>что я умею:</h3>
@@ -184,22 +193,30 @@
 		</section>
 
 		<section id="last" class="content color1">
-			<h3><a href="#">сообщение:</a></h3>
+			<h3><a href="#">Заказать услугу:</a></h3>
 			<div class="section-content1">
-				<form class="form" action="send">
+				<form id="form" class="form" action="send">
+					
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Site Name">
+					<input type="hidden" name="admin_email" value="uhonogo@yandex.ru">
+					<input type="hidden" name="form_subject" value="Form Subject">
+
 					<div class="row">
 						<label class="control-label">Ваше Имя</label>
-						<input type="text" name="name" id="name" class="txt" tabindex="1" placeholder="Как Вас зовут?" required>
+						<input type="text" name="field[name]" id="name" class="txt" tabindex="1" placeholder="..." required>
 					</div>
 					<div class="row">
 						<label class="control-label" for="inputEmail">Email</label>
-						<input type="text" id="inputEmail" class="txt"  placeholder="Email">
+						<input type="text" id="inputEmail" class="txt"
+						name="field[email]" required placeholder="...">
 					</div>
 					<div class="row1">
-						<textarea rows="15"></textarea>
+						<textarea rows="15" name="field[message]"></textarea>
 					</div>
 					<button type="submit" class="btn">отправить</button>
 				</form>
+				<div id="post_form_success"></div>
 			</div>
 			<footer id="fot" class="main-footer">
 			<h3 class="fot">контакты</h3>
@@ -218,7 +235,7 @@
 		<script defer src="js/parallax.js"></script>
 
 		<script defer type="text/javascript" src="js/button.js"></script>
-
+		<script defer src="js/sendPost.js"></script>
 		<script defer type="text/javascript" src="js/pscripts.js"></script>
 	</body>
 </html>
