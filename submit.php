@@ -1,19 +1,29 @@
 <?
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'uhonogo@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок'; //Загаловок сообщения
-        $message = '
-                <html>
-                    <head>
-                        <title>'.$subject.'</title>
-                    </head>
-                    <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>                        
-                    </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+ 
+$sendto   = "uhonogo@yandex.ru"; // почта, на которую будет приходить письмо
+$username = $_POST['name'];   // сохраняем в переменную данные полученные из поля c именем
+$usertel = $_POST['telephone']; // сохраняем в переменную данные полученные из поля c телефонным номером
+$usermail = $_POST['email']; // сохраняем в переменную данные полученные из поля c адресом электронной почты
+ 
+// Формирование заголовка письма
+$subject  = "Новое сообщение";
+$headers  = "From: " . strip_tags($usermail) . "\r\n";
+$headers .= "Reply-To: ". strip_tags($usermail) . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+ 
+// Формирование тела письма
+$msg  = "<html><body style='font-family:Arial,sans-serif;'>";
+$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Cообщение с сайта</h2>\r\n";
+$msg .= "<p><strong>От кого:</strong> ".$username."</p>\r\n";
+$msg .= "<p><strong>Почта:</strong> ".$usermail."</p>\r\n";
+$msg .= "<p><strong>Сайт:</strong> ".$usertel."</p>\r\n";
+$msg .= "</body></html>";
+ 
+// отправка сообщения
+if(@mail($sendto, $subject, $msg, $headers)) {
+    echo "<center><img src='images/spasibo.png'></center>";
+} else {
+    echo "<center><img src='images/ne-tpravleno.png'></center>";
 }
-?>
+ 
