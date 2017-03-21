@@ -1,2 +1,6 @@
-  var contactform =  document.getElementById('contactform');
-    contactform.setAttribute('action', '//formspree.io/' + 'uhonogo' + '@' + 'gmail' + '.' + 'com');
+$.ajax({
+    url: "http://formspree.io/uhonogo@gmail.com", 
+    method: "POST",
+    data: {message: "hello!"},
+    dataType: "json"
+});
