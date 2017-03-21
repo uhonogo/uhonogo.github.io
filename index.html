@@ -9,6 +9,7 @@
 	<title>YS</title>
 	
 	<meta name="google-site-verification" content="KiJbpOjBfs8fUD5Cdx8ZhjgTko-qsIq7xA5wDi8Gh3g" />
+	<meta name="referrer" content="origin">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
@@ -195,18 +196,17 @@
 		<section id="last" class="content color1">
 			<h3><a href="#">Заказать услугу:</a></h3>
 			<div class="section-content1">
-				 <form method="POST" action="http://formspree.io/uhonogo@yandex.ru">
+				 <form class="form" method="POST" action="http://formspree.io/uhonogo@yandex.ru">
 					<div class="row">
 						<label class="control-label">Ваше Имя</label>
-						<input type="text" name="entry.987777527" id="name" class="txt" tabindex="1" placeholder="..." required>
+						<input type="text"  class="txt" name="name" placeholder="..." required>
 					</div>
 					<div class="row">
 						<label class="control-label" for="inputEmail">Email</label>
-						<input type="email" id="inputEmail" class="txt"
-						name="emailAddress" required placeholder="...">
+						<input type="email" class="txt"	name="_replyto" required placeholder="...">
 					</div>
 					<div class="row1">
-						<textarea rows="15" name="message"></textarea>
+						<textarea rows="15" name="Message"></textarea>
 					</div>
 					<button type="submit" class="btn">отправить</button>
 				</form>
