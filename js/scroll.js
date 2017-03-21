@@ -1,5 +1,2 @@
-var submitted=false;
-$('#form').on('submit', function(e) {
-  $('#form *').fadeOut(2000);
-  $('#form').prepend('Your submission has been processed...');
-  });
+  var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'uhonogo' + '@' + 'yandex' + '.' + 'ru');
