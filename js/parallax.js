@@ -3,7 +3,7 @@ $(document).ready(function(argument) {
 		var lr = $(this).scrollTop();
 
 		$(".parallaxImage").css({
-			transform : "translateY(-"+lr/100 +'%)'
+			transform : "translateY(-"+lr/40 +'%)'
 		});
 	})
 });
