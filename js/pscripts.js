@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("head").append("<link rel='stylesheet' type='text/css' href='sass/style.css' />");
+    $("head").append("<link rel='stylesheet' type='text/css' href='sass/style.css'/>");
 });
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
