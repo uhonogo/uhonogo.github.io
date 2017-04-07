@@ -1,4 +1,4 @@
-.headerIcon,#back-top a,.menu,.menu1,.menu2,.mobile-menu,.contactMe,.btn-2:focus::after,.btn-2:hover::after,.btn-2:focus::before,.btn-2:hover::before,.btn-2::after,.btn-2::before,.pict .to-site,.dark,.display-block,.show-hide,.visible a,.btn {
+.headerIcon,#back-top a,.menu,.menu1,.menu2,.mobile-menu,.contactMe,.btn-2:active::after,.btn-2:hover::after,.btn-2:active::before,.btn-2:hover::before,.btn-2::after,.btn-2::before,.pict .to-site,.dark,.display-block,.show-hide,.visible a,.btn {
 transition:0.2s,ease-in-out;
 -webkit-transition:0.2s,ease-in-out;
 -moz-transition:0.2s,ease-in-out;
@@ -25,7 +25,7 @@ font-weight:400;
 text-transform:uppercase
 }
 
-.headerIcon:hover, .headerIcon:focus {
+.headerIcon:hover, .headerIcon:active {
 background:none;
 border:1px solid #fbe7ce;
 color:#fbe7ce
@@ -38,7 +38,7 @@ height:100%;
 color:#242424
 }
 
-.visible a:hover, .visible a:focus {
+.visible a:hover, .visible a:active {
 color:#E8474C
 }
 
@@ -67,7 +67,7 @@ border-radius:30px;
 
 }
 
-#back-top a:hover, #back-top a:focus {
+#back-top a:hover, #back-top a:active {
 background:#3d4050 url(../img/arrow.svg) no-repeat;
 border:1px solid #3d4050
 }
@@ -80,23 +80,18 @@ opacity:1
 opacity:0
 }
 
-.around-circle,.image {
-border-radius:10px 10px 0 0;
--webkit-border-radius:10px 10px 0 0;
-}
+
 
 @-webkit-keyframes up_down {
 0% {
 top:-5px;
 -webkit-animation-timing-function:ease-in-out;
--ms-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 
 100% {
 top:5px;
 -webkit-animation-timing-function:ease-in-out;
--ms-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 }
@@ -105,21 +100,18 @@ animation-timing-function:ease-in-out
 0% {
 top:-5px;
 -webkit-animation-timing-function:ease-in-out;
--ms-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 
 100% {
 top:5px;
 -webkit-animation-timing-function:ease-in-out;
--ms-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 }
 
-.image:hover, .image:focus {
+.image:hover, .image:active {
 -webkit-animation-play-state:paused;
--ms-animation-play-state:paused;
 animation-play-state:paused
 }
 
@@ -342,11 +334,11 @@ font-size:24pt;
 font-weight:100
 }
 
-.pict:hover .to-site, .pict:focus .to-site {
+.pict:hover .to-site, .pict:active .to-site {
 color:#fff
 }
 
-.to-site:hover, .to-site:focus {
+.to-site:hover, .to-site:active {
 color:#fff!important
 }
 
@@ -360,7 +352,7 @@ border-radius:0;
 -webkit-border-radius:0;
 }
 
-.pict:hover .dark, .pict:focus .dark {
+.pict:hover .dark, .pict:active .dark {
 width:100%;
 height:125%;
 border-radius:0;
@@ -391,14 +383,14 @@ position:relative;
 width:0;
 }
 
-.btn-2:hover::after,.btn-2:hover::before, .btn-2:focus::after,.btn-2:focus::before {
+.btn-2:hover::after,.btn-2:hover::before, .btn-2:active::after,.btn-2:active::before {
 -webkit-backface-visibility:hidden;
 backface-visibility:hidden;
 border-color:#fff;
 width:60%
 }
 
-.btn-2:hover::before, .btn-2:focus::before {
+.btn-2:hover::before, .btn-2:active::before {
 bottom:auto;
 top:0;
 width:60%
@@ -496,7 +488,7 @@ border-radius:15px;
 -webkit-border-radius:15px;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover, .btn:active {
 border:1px solid #E8474C;
 background:#fff;
 color:#444
@@ -553,7 +545,6 @@ font-size:18pt
 @media screen and (max-width: 320px) {
 div,svg {
 position:relative;
--webkit-box-sizing:border-box;
 box-sizing:border-box
 }
 
