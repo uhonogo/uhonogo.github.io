@@ -1,3 +1,67 @@
+
+$(window).resize(function () {
+var width = $('body').innerWidth();
+
+	if (+width <= 600) {
+		$('.pict').addClass('lookMore');
+		$('.lookMore').removeClass('pict');
+	} else {
+		$('.lookMore').addClass('pict');
+		$('.pict').removeClass('lookMore');
+	}
+});
+
+$(document).ready(function() {
+	$('#f-lookMore').click( function(event) {
+
+		$('#f-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+
+$(document).ready(function() {
+	$('#s-lookMore').click( function(event) {
+
+		$('#s-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+$(document).ready(function() {
+	$('#t-lookMore').click( function(event) {
+
+		$('#t-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+$(document).ready(function() {
+	$('#four-lookMore').click( function(event) {
+
+		$('#four-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+$(document).ready(function() {
+	$('#fif-lookMore').click( function(event) {
+
+		$('#fif-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+$(document).ready(function() {
+	$('#six-lookMore').click( function(event) {
+
+		$('#six-content').toggleClass('mobileDarkBg');
+		
+	})
+});
+
+$(document).click(function(event) {
+	if($(event.target).closest(".lookMore").length) return;
+	$('.dark').removeClass('mobileDarkBg');
+	indexClick = 0;
+	event.stopPropagation();
+});
+
 $(document).ready(function() {
     $("head").append("<link rel='stylesheet' type='text/css' href='sass/style.css' />");
 });

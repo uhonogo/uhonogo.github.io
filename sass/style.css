@@ -270,7 +270,7 @@ animation-duration:1s
 font-size:0
 }
 
-.pict {
+.pict, .lookMore {
 border-bottom:1px solid #333;
 position:relative;
 display:inline-block;
@@ -294,40 +294,11 @@ margin-right:1%
  position: absolute;
  top: 0;
  max-width: 457px;
- width: 100%;
+ width: 100% !important;
 }
 
-/* .numb1 {
-background:#fff url(../img/blog.png) no-repeat 50% 0;
-background-size:100% auto
-}
 
-.numb2 {
-background:#fff url(../img/hbuc.jpg) no-repeat 50% 0;
-background-size:100% auto
-}
-
-.numb3 {
-background:#fff url(../img/htmb.jpg) no-repeat 50% 0;
-background-size:100% auto
-}
-
-.numb4 {
-background:#fff url(../img/re1.png) no-repeat 50% 0;
-background-size:100% auto
-}
-
-.numb5 {
-background:#fff url(../img/landing.png) no-repeat 50% 0;
-background-size:100% auto
-}
-
-.numb6 {
-background:#fff url(../img/nn.jpg) no-repeat 50% 0;
-background-size:100% auto
-}
- */
-.pict .to-site {
+.pict .to-site, .lookMore .to-site {
 display:block;
 color:#fff;
 position:absolute;
@@ -593,7 +564,7 @@ width:90%
 z-index:9999
 }
 
-.skill1,.pict {
+.skill1,.pict, .lookMore {
 display:block;
 margin:20px auto!important
 }
@@ -606,7 +577,7 @@ opacity:1
 margin-bottom:100px!important
 }
 
-.pict {
+.pict, .lookMore {
 width:90%!important
 }
 
@@ -731,7 +702,7 @@ width:100%;
 margin:0
 }
 
-.skill1,.pict {
+.skill1,.pict, .lookMore {
 display:block;
 margin:20px auto!important
 }
@@ -744,7 +715,7 @@ opacity:1
 margin-bottom:100px!important
 }
 
-.pict {
+.pict, .lookMore {
 width:80%!important
 }
 
@@ -795,7 +766,7 @@ margin-left:5%;
 width:90%
 }
 
-.pict {
+.pict, .lookMore {
 width:45%;
 margin:10px!important
 }
@@ -816,6 +787,27 @@ margin-top:50px;
 position:relative
 }
 }
+
+/* mobile look open */
+@media screen and (max-width: 600px) {
+.pict:hover .dark {
+position:absolute;
+top:-25%;
+width:100%;
+height:50%;
+background:#5b5e79;
+border-radius:0;
+-webkit-border-radius:0;
+}
+.mobileDarkBg {
+width:100%;
+height:125%;
+border-radius:0;
+-webkit-border-radius:0;
+background:rgba(0,0,0,0.6);
+}
+}
+/* end */
 
 @media screen and (min-width: 921px) and (max-width: 1300px) {
 .parallax {
