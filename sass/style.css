@@ -303,12 +303,12 @@ display:block;
 color:#fff;
 position:absolute;
 text-align:center;
-top:50%;
+top:calc(50% - 35px);
 padding:0;
 margin:0;
 left:0;
 height:70px;
-line-height:65px;
+line-height:70px;
 width:100%;
 font-size:24pt;
 font-weight:100
@@ -324,9 +324,9 @@ color:#fff!important
 
 .dark {
 position:absolute;
-top:-25%;
+top:0;
 width:100%;
-height:50%;
+height:25%;
 background:#5b5e79;
 border-radius:0;
 -webkit-border-radius:0;
@@ -334,7 +334,7 @@ border-radius:0;
 
 .pict:hover .dark, .pict:active .dark {
 width:100%;
-height:125%;
+height:100%;
 border-radius:0;
 -webkit-border-radius:0;
 background:rgba(0,0,0,0.6);
@@ -791,7 +791,11 @@ position:relative
 /* mobile look open */
 @media screen and (max-width: 600px) {
 .parallaxImage {
-	transform: none !important;	
+	transform: none !important;
+	-moz-transform: none !important;
+	-ms-transform: none !important;
+	-o-transform: none !important;
+	-webkit-transform: none !important;
 }
 .mobileDarkBg {
 width:100%;
