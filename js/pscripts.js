@@ -89,11 +89,11 @@ $(document).ready(function() {
 	$(".around-circle").on("click", "a", function(event) {
 		event.preventDefault();
 		var id = $(this).attr('href'),
-			navHeight = $('#menu').height();
+			navHeight = 76;
 		scroll_el = $(this).attr('href');
 		if($(scroll_el).length != 0) {
 			$('html, body').animate({
-				scrollTop: $(scroll_el).offset().top - navHeight
+				scrollTop: $(scroll_el).offset().top - +navHeight
 			}, 1000)
 		}
 		return false
@@ -103,11 +103,11 @@ $(document).ready(function() {
 	$(".item").on("click", "a", function(event) {
 		event.preventDefault();
 		var id = $(this).attr('href'),
-			navHeight = $('#menu').height();
+			navHeight = 76;
 		scroll_el = $(this).attr('href');
 		if($(scroll_el).length != 0) {
 			$('html, body').animate({
-				scrollTop: $(scroll_el).offset().top - navHeight
+				scrollTop: $(scroll_el).offset().top - +navHeight
 			}, 1000)
 		}
 		return false
@@ -117,11 +117,11 @@ $(document).ready(function() {
 	$(".a").on("click", "a", function(event) {
 		event.preventDefault();
 		var id = $(this).attr('href'),
-			navHeight = $('#menu').height();
+			navHeight = 76;
 		scroll_el = $(this).attr('href');
 		if($(scroll_el).length != 0) {
 			$('html, body').animate({
-				scrollTop: $(scroll_el).offset().top - navHeight
+				scrollTop: $(scroll_el).offset().top - +navHeight
 			}, 1000)
 		}
 		return false
