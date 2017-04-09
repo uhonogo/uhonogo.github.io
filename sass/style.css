@@ -799,7 +799,7 @@ position:relative
 }
 
 /* mobile look open */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 .parallaxImage {
 	transform: none !important;
 	-moz-transform: none !important;
