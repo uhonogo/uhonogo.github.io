@@ -2,7 +2,7 @@
 $(window).resize(function () {
 var width = $('body').innerWidth();
 
-	if (+width <= 600) {
+	if (+width <= 1000) {
 		$('.pict').addClass('lookMore');
 		$('.lookMore').removeClass('pict');
 	} else {
