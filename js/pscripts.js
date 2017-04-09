@@ -62,6 +62,17 @@ $(document).click(function(event) {
 	event.stopPropagation();
 });
 
+$(window).scroll(function() { 
+    var the_top = $(document).scrollTop();
+    if (the_top > 90) {
+        $('#menu').addClass('modMenuHeight');
+    }
+    else {
+        $('#menu').removeClass('modMenuHeight');
+    }
+});
+
+
 $(document).ready(function() {
     $("head").append("<link rel='stylesheet' type='text/css' href='sass/style.css' />");
 });

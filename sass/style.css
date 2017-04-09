@@ -1,4 +1,4 @@
-.headerIcon,#back-top a,.menu,.menu1,.menu2,.mobile-menu,.contactMe,.btn-2:active::after,.btn-2:hover::after,.btn-2:active::before,.btn-2:hover::before,.btn-2::after,.btn-2::before,.pict .to-site,.dark,.display-block,.show-hide,.visible a,.btn {
+.headerIcon,#back-top a,.menu,.modMenuHeight,.menu1,.menu2,.mobile-menu,.contactMe,.btn-2:active::after,.btn-2:hover::after,.btn-2:active::before,.btn-2:hover::before,.btn-2::after,.btn-2::before,.pict .to-site,.dark,.display-block,.show-hide,.visible a,.btn {
 transition:0.2s,ease-in-out;
 -webkit-transition:0.2s,ease-in-out;
 -moz-transition:0.2s,ease-in-out;
@@ -639,6 +639,11 @@ line-height:30px!important;
 margin-bottom:6px!important;
 width:30px!important
 }
+.headerIcon {
+height:30px!important;
+line-height:30px!important;
+width:30px!important
+}
 }
 
 @media screen and (min-width: 391px) and (max-width: 434px) {
@@ -652,6 +657,11 @@ top:calc(50% - 15px)!important
 }
 
 .hIcon {
+height:30px!important;
+line-height:30px!important;
+width:30px!important
+}
+.headerIcon {
 height:30px!important;
 line-height:30px!important;
 width:30px!important
