@@ -185,7 +185,7 @@ width:240px
 }
 
 .text,.start,.end {
-color:#555;
+color:#333;
 font-size:25pt;
 position:relative;
 padding:0;
@@ -195,7 +195,7 @@ margin:0
 }
 
 .start::after {
- background: #E8474C;
+ background: rgba(232, 71, 76, .5);
  bottom:-6px;
  content:'';
  display:block;
