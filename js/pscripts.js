@@ -85,6 +85,44 @@ $(document).ready(function() {
   ga('create', 'UA-96020876-1', 'auto');
   ga('send', 'pageview');
 
+// opacity
+
+$(document).scroll(function() {
+  var dHeight = $(this).height();
+  var opacityCalc = $(this).scrollTop() / dHeight*6;
+
+    if ( opacityCalc > 1 ) {
+  	var opacityCalc = 1;
+  } else if ( opacityCalc <= 0.4 ) {
+  	var opacityCalc = 0.4;
+  }
+
+  if (dHeight >= $(this).scrollTop()) {
+    $('header').css('background', 'rgba(0,0,0,' + opacityCalc + ')');
+    $('.menu').css('background', 'rgba(23,95,138,' + opacityCalc + ')');
+  } return;
+
+});
+
+$(document).scroll(function() {
+  var dHeight = $(this).height();
+  var opacityCalc = $(this).scrollTop() / dHeight*6;
+
+    if ( opacityCalc > 1 ) {
+  	var opacityCalc = 1;
+  } else if ( opacityCalc <= 0.4 ) {
+  	var opacityCalc = 0;
+  }
+
+  if (dHeight >= $(this).scrollTop()) {
+    $('.menu').css('background', 'rgba(23,95,138,' + opacityCalc + ')');
+  } return;
+
+});
+
+
+// END opacity
+
 $(document).ready(function() {
 	$(".around-circle").on("click", "a", function(event) {
 		event.preventDefault();
