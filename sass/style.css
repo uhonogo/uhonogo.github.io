@@ -80,38 +80,19 @@ opacity:1
 opacity:0
 }
 
-
-
-@-webkit-keyframes up_down {
-0% {
-top:-5px;
--webkit-animation-timing-function:ease-in-out;
-animation-timing-function:ease-in-out
-}
-
-100% {
-top:5px;
--webkit-animation-timing-function:ease-in-out;
-animation-timing-function:ease-in-out
-}
-}
-
 @keyframes up_down {
 0% {
 top:-5px;
--webkit-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 
 100% {
 top:5px;
--webkit-animation-timing-function:ease-in-out;
 animation-timing-function:ease-in-out
 }
 }
 
 .image:hover, .image:active {
--webkit-animation-play-state:paused;
 animation-play-state:paused
 }
 
@@ -281,7 +262,8 @@ margin-right:1%
  width: 100% !important;
 }
 .pict:hover .iCan {
- transform: scale(1.03);
+ -ms-transform: scale(1.03);
+     transform: scale(1.03);
 }
 .pict .to-site, .lookMore .to-site {
 display:block;
