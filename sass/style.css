@@ -508,6 +508,9 @@ font-size:18pt
 }
 
 @media screen and (max-width: 320px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 div,svg {
 position:relative;
 box-sizing:border-box
@@ -533,6 +536,9 @@ width:270px
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 .text-justify {
 width:100%;
 left:0;
@@ -541,6 +547,9 @@ margin:0
 }
 
 @media screen and (max-width: 545px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 .section-content {
 width:90%
 }
@@ -609,6 +618,9 @@ position:relative
 }
 
 @media screen and (max-width: 390px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 .contactMe {
 width:120px!important
 }
@@ -632,6 +644,9 @@ width:30px!important
 }
 
 @media screen and (min-width: 391px) and (max-width: 434px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 .contactMe {
 width:200px!important
 }
@@ -660,6 +675,9 @@ width:200px!important
 }
 
 @media screen and (min-width: 546px) and (max-width: 720px) {
+.btn-2::after,.btn-2::before {
+ display: none;
+}
 body,.main-had,.section-content1,.content {
 width:100%!important
 }

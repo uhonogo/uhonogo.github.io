@@ -1,6 +1,6 @@
 
-$(window).resize(function () {
-var width = $('body').innerWidth();
+$(window).ready(function() {
+var width = $(document).width();
 
 	if (+width <= 700) {
 		$('.pict').addClass('lookMore');
