@@ -185,7 +185,7 @@ $(function() {
 		}
 		event.stopPropagation();
 		event.preventDefault();
-	})
+	})	
 });
 $(document).click(function(event) {
 	if($(event.target).closest(".show-hide").length) return;
