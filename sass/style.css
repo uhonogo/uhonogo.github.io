@@ -130,8 +130,11 @@ margin:0 auto
 }
 
 .section-content p {
+font-size:16pt;
+margin:0 auto;
 margin-top:90px;
-text-align:justify
+text-align:justify;
+max-width: 1218px;
 }
 
 .skill {
