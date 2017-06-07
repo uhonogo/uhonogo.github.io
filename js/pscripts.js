@@ -77,22 +77,21 @@ $(document).scroll(function() {
     }
     if (dHeight >= $(this).scrollTop()) {
         $('header').css('background', 'rgba(0,0,0,' + opacityCalc + ')');
-        $('.menu').css('background', 'rgba(23,95,138,' + opacityCalc + ')');
     }
     return;
 });
 $(document).scroll(function() {
-    var dHeight = $(this).height();
-    var opacityCalc = $(this).scrollTop() / dHeight * 6;
-    if (opacityCalc > 1) {
-        var opacityCalc = 1;
-    } else if (opacityCalc <= 0.4) {
-        var opacityCalc = 0;
+    var headHeight = $('#hei').height();
+    var menuHeight = $('#menu').height();
+    var changeBgcolorHeight = +headHeight - +menuHeight;
+
+    if ( $(this).scrollTop() >= changeBgcolorHeight ) {
+        $('.menu').css('background', '#416d8f');
+        $('.menu').addClass('shadow');
+    } else {
+        $('.menu').css('background', 'none');
+        $('.menu').removeClass('shadow');
     }
-    if (dHeight >= $(this).scrollTop()) {
-        $('.menu').css('background', 'rgba(23,95,138,' + opacityCalc + ')');
-    }
-    return;
 });
 $(document).ready(function() {
     $(".around-circle").on("click", "a", function(event) {
@@ -167,7 +166,8 @@ $(document).click(function(event) {
     $('#button-menu').removeClass('line');
     event.stopPropagation();
 });
-var $animation_elements = $('.bop', '.skill1');
+
+var $animation_elements = $('.skill');
 var $window = $(window);
 
 function check_if_in_view() {
@@ -183,12 +183,13 @@ function check_if_in_view() {
             jQuery('.t').addClass('start');
             jQuery('.t').removeClass('text');
             jQuery('.t').removeClass('end');
-            $element.addClass('anim');
+            $('.circle').addClass('circleAimation');
             $element.removeClass('anim-rev');
         } else {
             jQuery('.t').addClass('end');
             jQuery('.t').removeClass('text');
             jQuery('.t').removeClass('start');
+            $('.circle').removeClass('circleAimation');
             $element.removeClass('anim');
             $element.addClass('anim-rev');
         }
