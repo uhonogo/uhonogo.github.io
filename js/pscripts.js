@@ -69,11 +69,11 @@ ga('create', 'UA-96020876-1', 'auto');
 ga('send', 'pageview');
 $(document).scroll(function() {
     var dHeight = $(this).height();
-    var opacityCalc = $(this).scrollTop() / dHeight * 6;
-    if (opacityCalc > 0.8) {
-        var opacityCalc = 0.8;
-    } else if (opacityCalc <= 0.4) {
-        var opacityCalc = 0.4;
+    var opacityCalc = $(this).scrollTop() / dHeight * 4;
+    if (opacityCalc > 0.9) {
+        var opacityCalc = 0.9;
+    } else if (opacityCalc <= 0.5) {
+        var opacityCalc = 0.5;
     }
     if (dHeight >= $(this).scrollTop()) {
         $('header').css('background', 'rgba(0,0,0,' + opacityCalc + ')');
