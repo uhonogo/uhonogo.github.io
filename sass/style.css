@@ -344,11 +344,11 @@ font-weight:100;
 
 .pict:hover .to-site, .pict:active .to-site,
 .lookMore:hover .to-site, .lookMore:active .to-site {
-color:#fff
+color:#fff;
 }
 
 .to-site:hover, .to-site:active {
-color:#fff!important
+color:#fff!important;
 }
 
 .dark {
