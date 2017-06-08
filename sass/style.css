@@ -279,7 +279,7 @@ opacity:0
 font-size:0
 }
 
-.pict {
+.pict, .lookMore {
 position:relative;
 display:inline-block;
 width:30%;
@@ -325,14 +325,15 @@ font-size:24pt;
 font-weight:100
 }
 
-.pict .to-site {
-	display: inline-block !important;
-	padding: 0 20px;
-	position: relative;
-	width: auto;
+.to-site {
+display: inline-block !important;
+padding: 0 20px;
+position: relative;
+width: auto;
 }
 
-.pict:hover .to-site, .pict:active .to-site {
+.pict:hover .to-site, .pict:active .to-site,
+.lookMore:hover .to-site, .lookMore:active .to-site {
 color:#fff
 }
 
@@ -484,11 +485,15 @@ color:#444
 }
 
 footer {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 clear:both;
 height:60px;
 width:100%;
 background:#333333;
 color:#fff;
+padding: 0 15px;
 position:relative;
 margin-top:123px;
 bottom:0
@@ -501,17 +506,18 @@ float: left;
 font-size: 13pt;
 font-weight: normal;
 height: 60px !important;
+line-height: 60px;
 margin:0 !important;
 padding-top:0;
 text-transform: lowercase;
 width: auto;
 }
-.cont {
+footer .cont {
+display: inline-block;
 position: relative;
 float: left;
 height: 60px;
-line-height: 60px;
-width: 300px;
+width: auto;
 }
 .share {
 display:inline-block;
@@ -520,7 +526,7 @@ box-shadow:none;
 -webkit-box-shadow:none;
 width:30px;
 height:30px;
-margin: 0 5px !important;
+margin: 14px 5px !important;
 text-align:center;
 line-height:30px;
 font-size:12pt;
@@ -642,12 +648,16 @@ width:90%
 display:none!important
 }
 
+textarea {
+margin: 0 !important;
+}
+
 .btn {
 font-size:15pt
 }
 
 footer {
-margin-top:50px;
+margin-top:74px;
 position:relative
 }
 }
