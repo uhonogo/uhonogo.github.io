@@ -631,8 +631,8 @@ z-index:9999
 }
 
 .skill {
-background-size: 100% 100%;
--webkit-background-size: 100% 100%;
+background-size: 100% auto;
+-webkit-background-size: 100% auto;
 background-size: cover;
 -webkit-background-size: cover;
 }
