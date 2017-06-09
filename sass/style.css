@@ -631,7 +631,6 @@ z-index:9999
 }
 
 .skill {
-background-position: 70% 45%;
 background-size: 100% 100%;
 -webkit-background-size: 100% 100%;
 background-size: cover;
@@ -885,11 +884,11 @@ position:relative
 /* mobile look open */
 @media screen and (max-width: 700px) {
 .parallaxImage {
-	transform: none !important;
-	-moz-transform: none !important;
-	-ms-transform: none !important;
-	-o-transform: none !important;
-	-webkit-transform: none !important;
+    transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    -webkit-transform: none !important;
 }
 .mobileDarkBg {
 width:100%;
