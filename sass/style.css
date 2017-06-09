@@ -169,7 +169,10 @@ max-width: 1218px;
 
 .skill {
 background: url('../img/computer.jpg') no-repeat 0% 45%;
+background-size: 100% auto;
+-webkit-background-size: 100% auto;
 background-size: cover;
+-webkit-background-size: cover;
 bottom: 0;
 width:100%;
 height:auto;
@@ -627,6 +630,13 @@ width:90%
 z-index:9999
 }
 
+.skill {
+background-position: 70% 45%;
+background-size: 100% auto;
+-webkit-background-size: 100% auto;
+background-size: cover;
+-webkit-background-size: cover;
+}
 .skill1,.pict, .lookMore {
 display:block;
 margin:20px auto!important
