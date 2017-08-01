@@ -8,6 +8,24 @@ $(window).ready(function() {
         $('.pict').removeClass('lookMore');
     }
 });
+$(window).ready(function() {
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+  });
+});
 $(document).ready(function() {
     $('#f-lookMore').click(function(event) {
         $('#f-content').toggleClass('mobileDarkBg');
@@ -52,8 +70,22 @@ $(window).scroll(function() {
         $('#menu').removeClass('modMenuHeight');
     }
 });
-$(document).ready(function() {
-    $("head").append("<link rel='stylesheet' type='text/css' href='sass/style.css' />");
+
+var join = $(".mobile-menu-block"),
+    joinLink = $("#button-menu"),
+    indexClick = 0;
+$(function() {
+    joinLink.click(function(n) {
+        0 === indexClick ? (join.addClass("show"), join.removeClass("hide"),
+                            indexClick = 1, $("#nav-icon4").removeClass("mobile-menu"),
+                            $("#nav-icon4").addClass("open"), 
+                            $(".smartphoneMenu").addClass("open-menu")) : (join.addClass("hide"),
+                            join.removeClass("show"), indexClick = 0,
+                            $("#nav-icon4").addClass("mobile-menu"),
+                            $("#nav-icon4").removeClass("open"),
+                            $(".smartphoneMenu").removeClass("open-menu")),
+                            n.stopPropagation(), n.preventDefault()
+    })
 });
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -134,37 +166,6 @@ $(document).ready(function() {
         }
         return false
     })
-});
-var join = $('.show-hide'),
-    joinLink = $('#touch-menu'),
-    indexClick = 0;
-$(function() {
-    joinLink.click(function(event) {
-        if (indexClick === 0) {
-            join.addClass('display-block');
-            join.removeClass('show-hide');
-            indexClick = 1;
-            $('#button-menu').removeClass('mobile-menu');
-            $('#button-menu').addClass('line')
-        } else {
-            join.addClass('show-hide');
-            join.removeClass('display-block');
-            indexClick = 0;
-            $('#button-menu').addClass('mobile-menu');
-            $('#button-menu').removeClass('line')
-        }
-        event.stopPropagation();
-        event.preventDefault();
-    })
-});
-$(document).click(function(event) {
-    if ($(event.target).closest(".show-hide").length) return;
-    join.addClass('show-hide');
-    join.removeClass('display-block');
-    indexClick = 0;
-    $('#button-menu').addClass('mobile-menu');
-    $('#button-menu').removeClass('line');
-    event.stopPropagation();
 });
 
 var $animation_elements = $('.skill');
