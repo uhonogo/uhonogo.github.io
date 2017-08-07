@@ -760,6 +760,7 @@ display: inline-block;
 position: relative;
 float: left;
 height: 60px;
+margin: 0;
 width: auto;
 }
 .share {
