@@ -84,9 +84,9 @@ color:#fbe7ce
 .nav-icon4{
     width: 26px !important;
     height: 15px;
-    top: 37px;
+    top: calc(50% - 7px);
     right: 20px;
-    position: relative;
+    position: absolute;
     float: right;
     margin: 0 auto;
     -webkit-transform: rotate(0deg);
@@ -912,13 +912,10 @@ position:relative
 .btn-2::after,.btn-2::before {
  display: none;
 }
-.contactMe {
-width:120px!important
-}
 
 .headIcon {
 text-align:left!important;
-top:calc(50% - 33px)!important
+top:calc(50% - 15px)!important
 }
 
 .hIcon {
@@ -937,9 +934,6 @@ width:30px!important
 @media only screen and (min-width: 391px) and (max-width: 434px) {
 .btn-2::after,.btn-2::before {
  display: none;
-}
-.contactMe {
-width:200px!important
 }
 
 .headIcon {
