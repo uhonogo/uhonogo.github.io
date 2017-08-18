@@ -284,11 +284,6 @@ top:5px;
         animation-play-state:paused
 }
 
-/* #to2 {
-background: -webkit-repeating-linear-gradient(-45deg, #fff, #fff 25%, #f8fafc 25%, #f8fafc 50%);
-background:         repeating-linear-gradient(-45deg, #fff, #fff 25%, #f8fafc 25%, #f8fafc 50%);
-} */
-
 .content {
 z-index:3;
 min-height:100vh;
@@ -372,27 +367,16 @@ width: 100%;
 display:inline-block;
 position:relative;
 height:240px;
-margin:0 10px;
+margin: 10px;
+padding: 10px;  
 text-align:center;
 width:240px;
 z-index:3
-}
-
-.skill1 svg g {
-fill: none;
-}
-.bop {
-stroke: #fff;
 }
 .none {
 display:none
 }
 
-svg {
-display: block;
-height:240px;
-width:240px
-}
 
 .svgCircle { 
 
