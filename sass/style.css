@@ -141,49 +141,50 @@ color:#fbe7ce
     transform-origin: left center;
 }
 .nav-icon4.open span:nth-child(1){
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 0px;
-    left: 0px
+ -webkit-transform: rotate(45deg);
+ -moz-transform: rotate(45deg);
+ -o-transform: rotate(45deg);
+ transform: rotate(45deg);
+ top: 0px;
+ left: 0px
 }
 .nav-icon4.open span:nth-child(2){
     width: 0%;
     opacity: 0
 }
 .nav-icon4.open span:nth-child(3){
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 19px;
-    left: 0px
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+ top: 19px;
+ left: 0px
 }
 .mobile-menu-block{
-    background: rgba(0,0,0, .7);
-    background-size: 100% auto;
-    height: 100vh!important;
-    position: fixed;
-    right: 0;
-    top: 0;
-    text-align: center;
-    width: 100vw;
-    z-index: 99
+ background: rgba(0,0,0, .7);
+ background-size: 100% auto;
+ height: 100vh!important;
+ position: fixed;
+ right: 0;
+ top: 0;
+ text-align: center;
+ width: 100%;
+ z-index: 99
 }
 .main{
  list-style: none;
- margin: 0;
+ margin: 0 auto;
  padding: 0;
  position: absolute;
  top: calc(50% - 100px);
- width: 100%;
+ width: 230px;
+ left: calc(50% - 115px);
 }
-.mobile-menu-block .item {
+.mobile-menu-block .menuItem {
  height: 50px;
  line-height: 50px
 }
-.mobile-menu-block .item a{
+.mobile-menu-block .menuItem a{
  color: #fff;
  position: relative;
  text-transform: uppercase;
@@ -194,8 +195,8 @@ color:#fbe7ce
 -o-transition: all 0.2s ease-in-out;
 }
 
-.mobile-menu-block .item a::after,
-.mobile-menu-block .item a::before{
+.mobile-menu-block .menuItem a::after,
+.mobile-menu-block .menuItem a::before{
 background: #fff;
 content: '';
 display: block;
@@ -208,19 +209,19 @@ transition: all 0.2s ease-in-out;
 -ms-transition: all 0.2s ease-in-out;
 -o-transition: all 0.2s ease-in-out;
 }
-.mobile-menu-block .item a::after{
+.mobile-menu-block .menuItem a::after{
 bottom: 0;
 right: -20px;
 }
-.mobile-menu-block .item a::before{
+.mobile-menu-block .menuItem a::before{
 left: -20px;
 top: 0;
 }
-.mobile-menu-block .item a:hover::after,
-.mobile-menu-block .item a:hover::before{
+.mobile-menu-block .menuItem a:hover::after,
+.mobile-menu-block .menuItem a:hover::before{
 height: 100%;
 }
-.mobile-menu-block .item a:hover {
+.mobile-menu-block .menuItem a:hover {
     color: red;
 }
 

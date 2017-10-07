@@ -1,44 +1,54 @@
-$(window).ready(function() {
-    var width = $(document).width();
-    if (+width <= 700) {
-        $('.pict').addClass('lookMore');
-        $('.lookMore').removeClass('pict');
-    } else {
-        $('.lookMore').addClass('pict');
-        $('.pict').removeClass('lookMore');
+$(document).ready(function() {
+	var windowWidth = $(window).width()
+    
+    if(windowWidth <= 768) {
+    	$('.pict').addClass('lookMore');
+       	$('.lookMore').removeClass('pict');
     }
+    else{
+     	$('.lookMore').addClass('pict');
+       	$('.pict').removeClass('lookMore');
+    }
+ 
+  	$(window).resize(function(){
+  		var windowWidth = $(window).width()
+    	if(windowWidth <= 768) {
+    		$('.pict').addClass('lookMore');
+       		$('.lookMore').removeClass('pict');
+    	}
+    	else{
+    		$('.lookMore').addClass('pict');
+       		$('.pict').removeClass('lookMore');
+    	}
+  	});
 });
 
 $(document).ready(function() {
     $('#f-lookMore').click(function(event) {
         $('#f-content').toggleClass('mobileDarkBg');
     })
-});
-$(document).ready(function() {
+
     $('#s-lookMore').click(function(event) {
         $('#s-content').toggleClass('mobileDarkBg');
     })
-});
-$(document).ready(function() {
+
     $('#t-lookMore').click(function(event) {
         $('#t-content').toggleClass('mobileDarkBg');
     })
-});
-$(document).ready(function() {
+
     $('#four-lookMore').click(function(event) {
         $('#four-content').toggleClass('mobileDarkBg');
     })
-});
-$(document).ready(function() {
+
     $('#fif-lookMore').click(function(event) {
         $('#fif-content').toggleClass('mobileDarkBg');
     })
-});
-$(document).ready(function() {
+
     $('#six-lookMore').click(function(event) {
         $('#six-content').toggleClass('mobileDarkBg');
     })
 });
+
 $(document).click(function(event) {
     if ($(event.target).closest(".lookMore").length) return;
     $('.dark').removeClass('mobileDarkBg');
@@ -55,20 +65,37 @@ $(window).scroll(function() {
 });
 
 var join = $(".mobile-menu-block"),
-    joinLink = $("#button-menu"),
+    joinLink = $(".menu_Button"),
     indexClick = 0;
 $(function() {
     joinLink.click(function(n) {
-        0 === indexClick ? (join.addClass("show"), join.removeClass("hide"),
-                            indexClick = 1, $("#nav-icon4").removeClass("mobile-menu"),
-                            $("#nav-icon4").addClass("open"), 
-                            $(".smartphoneMenu").addClass("open-menu")) : (join.addClass("hide"),
-                            join.removeClass("show"), indexClick = 0,
-                            $("#nav-icon4").addClass("mobile-menu"),
-                            $("#nav-icon4").removeClass("open"),
-                            $(".smartphoneMenu").removeClass("open-menu")),
-                            n.stopPropagation(), n.preventDefault()
-    })
+       	if(0 === indexClick){
+       		join.addClass("show"); 
+       		join.removeClass("hide");
+       	 	indexClick = 1;
+       	 	$("#nav-icon4").removeClass("mobile-menu");
+       	 	$("#nav-icon4").addClass("open"); 
+       	 	$(".smartphoneMenu").addClass("open-menu");
+    	} else {
+    		join.addClass("hide");
+            join.removeClass("show");
+            indexClick = 0;
+            $("#nav-icon4").addClass("mobile-menu");
+            $("#nav-icon4").removeClass("open");
+            $(".smartphoneMenu").removeClass("open-menu");
+        }
+        n.stopPropagation()
+    });
+    $('.menuItem a').click(function(n) {
+    	setTimeout(function(){
+    		join.addClass("hide");
+        	join.removeClass("show");
+        	indexClick = 0;
+        	$("#nav-icon4").addClass("mobile-menu");
+        	$("#nav-icon4").removeClass("open");
+        	$(".smartphoneMenu").removeClass("open-menu");
+    	},1000);
+    });
 });
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -108,8 +135,9 @@ $(document).scroll(function() {
         $('.menu').removeClass('shadow');
     }
 });
+
 $(document).ready(function() {
-    $(".around-circle").on("click", "a", function(event) {
+    $(".pageNavigation").on("click", "a", function(event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             navHeight = 76;
@@ -122,57 +150,34 @@ $(document).ready(function() {
         return false
     })
 });
-$(document).ready(function() {
-    $(".item").on("click", "a", function(event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            navHeight = 76;
-        scroll_el = $(this).attr('href');
-        if ($(scroll_el).length != 0) {
-            $('html, body').animate({
-                scrollTop: $(scroll_el).offset().top - +navHeight
-            }, 1000)
-        }
-        return false
-    })
-});
-$(document).ready(function() {
-    $(".a").on("click", "a", function(event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            navHeight = 76;
-        scroll_el = $(this).attr('href');
-        if ($(scroll_el).length != 0) {
-            $('html, body').animate({
-                scrollTop: $(scroll_el).offset().top - +navHeight
-            }, 1000)
-        }
-        return false
-    })
-});
+
 
 var $animation_elements = $('.skill');
 var $window = $(window);
 
 function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
+
+    var window_height = $window.height(),
+    	window_top_position = $window.scrollTop(),
+    	window_bottom_position = (window_top_position + window_height);
+
     $.each($animation_elements, function() {
-        var $element = $(this);
-        var element_height = $element.outerHeight();
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = (element_top_position + element_height);
+
+        var $element = $(this),
+        	element_height = $element.outerHeight(),
+        	element_top_position = $element.offset().top,
+        	element_bottom_position = (element_top_position + element_height);
+
         if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-            jQuery('.t').addClass('start');
-            jQuery('.t').removeClass('text');
-            jQuery('.t').removeClass('end');
+            $('.t').addClass('start');
+            $('.t').removeClass('text');
+            $('.t').removeClass('end');
             $('.circle').addClass('circleAimation');
             $element.removeClass('anim-rev');
         } else {
-            jQuery('.t').addClass('end');
-            jQuery('.t').removeClass('text');
-            jQuery('.t').removeClass('start');
+            $('.t').addClass('end');
+            $('.t').removeClass('text');
+            $('.t').removeClass('start');
             $('.circle').removeClass('circleAimation');
             $element.removeClass('anim');
             $element.addClass('anim-rev');
