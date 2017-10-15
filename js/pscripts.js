@@ -11,3 +11,4 @@ $(document).ready(function(){var owlWidth = $('.owl-carousel').width();
 $('.slideWidth').width(owlWidth)});
 $(window).resize(function(){var owlWidth = $('.owl-carousel').width();
 $('.slideWidth').width(owlWidth)});
+$(".mobile-menu-block a").on('touchstart mouseenter focus', function(e) {if(e.type == 'touchstart') {e.stopImmediatePropagation();e.preventDefault();}});
