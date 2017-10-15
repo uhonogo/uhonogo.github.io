@@ -52,7 +52,7 @@ h2{color:rgba(249,32,4, .5);max-width:100%;font-size:30pt;font-weight:400;text-t
 .color3{background:#f8fafc;}
 .section-content{width:80%;margin:0 auto}
 .section-content p{font-size:16pt;margin:0 auto;padding:0 15px;text-align:justify;max-width:1218px;}
-.skill{background:url('../img/computer.jpg') no-repeat 0% 45%;background-size:auto 100%;-webkit-background-size:auto 100%;background-attachment:fixed;-webkit-background-attachment:fixed;bottom:0;width:100%;height:auto;margin-top:142px;position:relative;text-align:center;font-size:0;overflow:hidden;}
+.skill{background:url('../img/computer.jpg') no-repeat 0% 45%;background-size:auto 100%;-webkit-background-size:auto 100%;bottom:0;width:100%;height:auto;margin-top:142px;position:relative;text-align:center;font-size:0;overflow:hidden;}
 .skill h1{color:#fff;font-size:26pt;margin:0;margin-bottom:3%;text-transform:uppercase;}
 .skill_wrapper{background:rgba(0, 0, 0, .65);height:100%;padding:60px 0;width:100%;}
 .skill1{display:inline-block;position:relative;height:240px;margin:10px;padding:10px;text-align:center;width:240px;z-index:3}
