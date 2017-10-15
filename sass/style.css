@@ -1,6 +1,7 @@
 .headerIcon,#back-top a,.menu,.mobileDarkBg,.modMenuHeight,.txt:focus,.txt:valid,.txt:invalid,.menu1,.menu2,.iCan,.mobile-menu,.contactMe,.btn-2:active::after,.btn-2:hover::after,.btn-2:active::before,.btn-2:hover::before,.btn-2::after,.btn-2::before,.pict .to-site,.dark,.display-block,.show-hide,.visible a,.btn{transition:0.2s ease-in-out;-webkit-transition:0.2s ease-in-out;-moz-transition:0.2s ease-in-out;-ms-transition:0.2s ease-in-out;-o-transition:0.2s ease-in-out}
 h4{margin-top:0}
 section h1{text-align:center;font-weight:300;margin-top:0;font-size:23pt}
+input,textarea{border-radius:0;-webkit-border-radius:0;}
 h1 span,
 h2{color:rgba(249,32,4, .5);max-width:100%;font-size:30pt;font-weight:400;text-transform:uppercase}
 .line{background:#fff;display:inline-block;margin-top:39px;margin-bottom:99px;position:relative;}
@@ -75,7 +76,7 @@ h2{color:rgba(249,32,4, .5);max-width:100%;font-size:30pt;font-weight:400;text-t
 .active{display:block;}
 .owl-dots{height:30px;width:100%;}
 .owl-dots .owl-dot{display:inline-block;height:20px;margin:0 10px;width:20px;}
-.owl-dot span{background:rgba(100,148,185,.3);border-radius:50%;display:block;height:20px;width:20px;}
+.owl-dot span{background:rgba(100,148,185,.3);border-radius:50%;-webkit-border-radius:50%;display:block;height:20px;width:20px;}
 .owl-dots .active span{background:rgba(100,148,185,.7);}
 .slideWidth{text-align: left;}
 .pict, .lookMore{display:inline-block;position:relative;max-width:315px;margin:20px;height:auto;max-height:300px;overflow:hidden;box-sizing:border-box;-webkit-box-shadow:0 0 15px rgba(0, 0, 0, .1);box-shadow:0 0 15px rgba(0, 0, 0, .1);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
