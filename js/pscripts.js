@@ -11,3 +11,8 @@ $(document).ready(function(){var owlWidth = $('.owl-carousel').width();
 $('.slideWidth').width(owlWidth)});
 $(window).resize(function(){var owlWidth = $('.owl-carousel').width();
 $('.slideWidth').width(owlWidth)});
+$('a').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+});
