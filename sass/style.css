@@ -993,8 +993,13 @@ footer .cont {
         font-size: 15pt
     }
     footer {
+    	height: auto;
         margin-top: 74px;
         position: relative
+    }
+    .fot, .cont{
+    	float: none !important;
+    	padding: 0;
     }
 }
 
@@ -1171,6 +1176,10 @@ footer .cont {
     body {
         font-size: 20pt !important;
     }
+    #last > h3 {
+    	margin-top: 0;
+    	padding-top: 20px !important;
+    }
     .line {
         margin-bottom: 39px;
     }
@@ -1216,5 +1225,11 @@ footer .cont {
     .content {
         height: auto!important;
         min-height: 1000px!important
+    }
+}
+@media only screen and (max-height:1056px) {
+    .skill {
+    	background-size: auto 100%;
+    	-webkit-background-size: auto 100%;
     }
 }
