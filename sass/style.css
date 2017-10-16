@@ -31,6 +31,8 @@ h2{color:rgba(249,32,4, .5);max-width:100%;font-size:30pt;font-weight:400;text-t
 .mobile-menu-block .menuItem a::before{background:#fff;content:'';display:block;height:0;position:absolute;width:2px;transition:all 0.2s ease-in-out;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;}
 .mobile-menu-block .menuItem a::after{bottom:0;right:-20px;}
 .mobile-menu-block .menuItem a::before{left:-20px;top:0;}
+.mobile-menu-block .menuItem a:focus::after,
+.mobile-menu-block .menuItem a:focus::before,
 .mobile-menu-block .menuItem a:hover::after,
 .mobile-menu-block .menuItem a:hover::before{height:100%;}
 .mobile-menu-block .menuItem a:hover{color:red;}
