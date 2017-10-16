@@ -99,7 +99,7 @@ h2 {
 .navbar {
 	border: 0;
 	border-radius: 0;
-	box-shadow: 0 0 10px rgba(0,0,0, .2);
+	-webkit-border-radius: 0;
 	height: 90px;
 	margin: 0;
 	width: 100%;
@@ -269,7 +269,10 @@ h2 {
 .smartphoneMenu .menuNav,
 .smartphoneMenu .logo{
 	height: 100% !important;
-	width: 50% !important;
+	width: 20% !important;
+}
+.smartphoneMenu .contactMe {
+	margin-right: 0 !important;
 }
 .smartphoneMenu .menuNav_items{	
 	float: right !important;
