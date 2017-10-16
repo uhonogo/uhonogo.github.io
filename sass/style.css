@@ -123,7 +123,7 @@ h2 {
 	height: 100%;
 }
 .navbar .nav li a{
-	color: #95A5AD;
+	color: #fff;
 	font-size: 14pt;
 	height: 100%;
 	line-height: 90px;
@@ -256,16 +256,6 @@ h2 {
 	z-index: 99;
 	position: fixed;
 }
-
-.smartphoneMenu::after{
-	background: rgba(#fff, .5);
-	bottom: 0;
-	content: '';
-	display: block;
-	height: 1px;
-	position: absolute;
-	width: calc(100% - 30px);
-}
 .smartphoneMenu .menuNav,
 .smartphoneMenu .logo{
 	height: 100% !important;
@@ -315,7 +305,7 @@ h2 {
 
 .mobile-menu-block .menuItem a {
     color: #fff;
-    font-size: 12pt;
+    font-size: 15pt;
     position: relative;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
@@ -326,7 +316,7 @@ h2 {
 }
 
 .mobile-menu-block .menuItem a:hover {
-    color: red;
+    color: #f7ddc4;
 }
 
 #back-top a {
