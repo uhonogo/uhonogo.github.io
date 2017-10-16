@@ -438,9 +438,8 @@ h2 {
     overflow: hidden;
 }
 
-.skill h1 {
-    color: #fff;
-    font-size: 26pt;
+.skill h3 {
+    color: #fff !important;
     margin: 0;
     margin-bottom: 3%;
     text-transform: uppercase;
@@ -1057,8 +1056,8 @@ footer .cont {
     .line::after {
         display: none;
     }
-    .line {
-        font-size: 1.7rem;
+    .line,h3,h2 {
+        font-size: .95em;
     }
     header>.text-justify p {
         border-bottom: 0 !important;
